@@ -5,13 +5,14 @@
   "scripts": {
     "test": "jest -i --forceExit ",
     "single-test": "./node_modules/.bin/jest --runTestsByPath -i --forceExit  __tests__/listPlayer.test.js",
-    "start": "babel-node ./src/index.js"
+    "start": "babel-node ./src/index.js",
+    "dev": "nodemon --exec babel-node ./src/index.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.17.8",
-    "@babel/node": "^7.16.8",
+    "@babel/core": "^7.20.12",
+    "@babel/node": "^7.20.7",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.16.11",
@@ -22,6 +23,7 @@
   "dependencies": {
     "express": "^4.17.3",
     "express-rate-limit": "^6.3.0",
+    "nodemon": "^2.0.20",
     "sequelize": "^6.17.0",
     "sqlite3": "^5.0.2"
   }

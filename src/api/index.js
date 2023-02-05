@@ -10,6 +10,10 @@ import express from 'express';
 const app = express();
 app.disable("x-powered-by");
 
+// middleware
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
 const routes = express.Router();
 
 require('./player').default(routes);

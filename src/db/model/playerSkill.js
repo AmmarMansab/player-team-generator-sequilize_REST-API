@@ -3,28 +3,35 @@
 // YOU SHOULD NOT CHANGE THE EXPORTED VALUE OF THIS FILE
 // ---------------------------------------------------------------------------------------------
 
-import Sequelize from 'sequelize';
-import database from '../index';
+import Sequelize from "sequelize";
+import database from "../index";
 
-const PlayerSkill = database.define('playerSkill', {
+const PlayerSkill = database.define(
+  "playerSkill",
+  {
     id: {
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
-        allowNull: false,
-        primaryKey: true
+      type: Sequelize.INTEGER,
+      autoIncrement: true,
+      allowNull: false,
+      primaryKey: true,
     },
     skill: {
-        type: Sequelize.STRING(200),
+      type: Sequelize.STRING(200),
     },
     value: {
-        type: Sequelize.INTEGER
-    }
-}, {
-    timestamps: false
-})
+      type: Sequelize.INTEGER,
+    },
+  },
+  {
+    timestamps: false,
+  }
+);
 
 PlayerSkill.associate = (models) => {
-    models.PlayerSkill.belongsTo(models.Player);
-}
+  models.PlayerSkill.belongsTo(models.Player, {
+    as: "player",
+    foreignKey: "PlayerId",
+  });
+};
 
 export default PlayerSkill;

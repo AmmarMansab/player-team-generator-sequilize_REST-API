@@ -1,5 +1,7 @@
 # Player selection
 
+[![Demo video](https://youtu.be/P-iwyre0OLo)]
+
 ## Build the solution
 This solution requires NodeJs v16 and SQLite 3 installed.
 

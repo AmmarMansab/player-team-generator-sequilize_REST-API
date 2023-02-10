@@ -1,5 +1,6 @@
 # Player selection
 [![Demo video](https://img.youtube.com/vi/P-iwyre0OLo/0.jpg)](https://www.youtube.com/watch?v=P-iwyre0OLo)
+Click to play the video!
 
 ## Build the solution
 This solution requires NodeJs v16 and SQLite 3 installed.
